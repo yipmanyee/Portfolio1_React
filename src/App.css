@@ -1,9 +1,9 @@
 body {
-  font-family: "CostarBrownLight", sans-serif, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1, h2, h3, .card-body>.card-title {
-  font-family: "Pinyon script", cursive;
+  font-family: "Lobster", cursive;
 }
 
 .card-title {
