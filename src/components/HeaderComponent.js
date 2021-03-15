@@ -25,7 +25,10 @@ class Header extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <h1>Iola Court</h1>
+                                <img src="/assets/images/K_Logo.jpg" height="60" width="30" alt="Kenmar Logo"/>
+                            </div>
+                            <div className="col">
+                                <h1>Kenmar Apartment</h1>
                                 <h2>Your Affordable Apartment in Tacoma</h2>
                             </div>
                         </div>
@@ -34,8 +37,7 @@ class Header extends Component {
 
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                    <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" 
-                    height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
+                    <NavbarBrand className="mr-auto" href="/"></NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar>
@@ -45,13 +47,8 @@ class Header extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/directory">
-                                    <i className="fa fa-list fa-lg" /> Directory
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/aboutus">
-                                    <i className="fa fa-info fa-lg" /> About
+                                <NavLink className="nav-link" to="/amenities">
+                                    <i className="fa fa-bed fa-lg" /> Amenities
                                 </NavLink>
                             </NavItem>
                             <NavItem>
