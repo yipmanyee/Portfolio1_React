@@ -25,7 +25,7 @@ class Header extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <img src="/assets/images/K_Logo.jpg" height="60" width="30" alt="Kenmar Logo"/>
+                                <img src="/assets/images/K_Logo.jpg" height="120" width="100" alt="Kenmar Logo"/>
                             </div>
                             <div className="col">
                                 <h1>Kenmar Apartment</h1>

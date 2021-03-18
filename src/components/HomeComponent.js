@@ -1,23 +1,11 @@
 import React from 'react';
-import { UncontrolledCarousel } from 'reactstrap';
 
-function RenderCard({item}) {
+function Home(props) {
     return (
-        <Card>
-            <CardImg src={item.image} alt={item.name} />
-            <CardBody>
-                <CardTitle>{item.name}</CardTitle>
-                <CardText>{item.description}</CardText>
-            </CardBody>
-        </Card>
-    );
-}
-
-function Desc(props) {
-    return (
+        <React.Fragment>
         <div className="container">
             <div className="row">
-                <div className="col">
+                    <div className="col">
                     <h2>General Property Description</h2>
                         <p>Single story apartment complex located 3 mins from Lakewood Towne Center and 5 mins from Lakewood Transit Park
                             and Ride. Next to bus line on 108th Street. Each unit is allocated 1 parking space.
@@ -26,8 +14,12 @@ function Desc(props) {
                             There is a secured laundry room with coin operated washer/dryer and sink for hand wash items.
                         </p>
                 </div>
+                
+                <img src="/assets/images/K_Front.jpg" className="img-fluid" alt="front"></img>
+                
             </div>
         </div>
+        </React.Fragment>
     );
 }
 

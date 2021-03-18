@@ -4,7 +4,7 @@ import { UncontrolledCarousel } from 'reactstrap';
 
 const items = [
     {
-        image: "/assets/images/K_Parking.jpg",
+        src: "/assets/images/K_Parking.jpg",
         altText: 'Slide 1',
         caption: 'Front Side Parking',
         header: 'Front Side Parking',
