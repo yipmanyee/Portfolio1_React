@@ -1,24 +1,54 @@
 import React from 'react';
 import {ListGroup, ListGroupItem} from 'reactstrap';
+import { Table } from 'reactstrap';
 
 function Amenities(props) {
     return(
         <React.Fragment>
         <div className="container">
             <div className="row">
-            <div className="col-4">
-            <img src="/assets/images/K_Front Yard.JPG" className="img-fluid" alt="front yard"></img>
-            </div>
-            <div className="col-4">
+            <div className="col">
             <img src="/assets/images/K_Living Room.jpeg" className="img-fluid" alt="living room"></img>
             </div>
-            <div className="col-4">
+            <div className="col">
+            <img src="/assets/images/K_Front Yard.JPG" className="img-fluid" alt="front yard"></img>
+            </div>
+            <div className="col">
             <img src="/assets/images/K_Kitchen.jpeg" className="img-fluid" alt="kitchen"></img>
             </div>
             </div>
         </div>
-        <div>        
-            <h1>Amenities</h1>    
+        <div>
+            <div className="row">
+            <div className="col-6">
+            <h2>Bedroom Information</h2>
+                <Table striped>
+                    <thead>
+                        <tr>
+                            <th>Configuration</th>
+                            <th>Bath</th>
+                            <th># of Units</th>
+                            <th>Average Sq Feet</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">One Bedroom</th>
+                                <td>1 Bath</td>
+                                <td>4</td>
+                                <td>600 Sq Feet</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Two Bedroom</th>
+                                <td>2 Bath</td>
+                                <td>6</td>
+                                <td>800 Sq Feet</td>
+                            </tr>
+                        </tbody>
+                </Table>
+            </div>
+        <div className="col-6">        
+            <h2>Amenities</h2>    
             <ListGroup>
                 <ListGroupItem>1 Parking Stall per unit</ListGroupItem>
                 <ListGroupItem>Utilities included water, sewer and garbage. Tenant pays electrical</ListGroupItem>
@@ -27,10 +57,11 @@ function Amenities(props) {
                 <ListGroupItem>Electric Stove / Oven</ListGroupItem>
                 <ListGroupItem>Bathtub</ListGroupItem>
             </ListGroup>
+            </div>
+        </div>
         </div>
         </React.Fragment>
     );
-
 }
 
 export default Amenities;
