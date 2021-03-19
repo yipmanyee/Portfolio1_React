@@ -1,8 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import {Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 
-function Contact(props) {
-    return (
+class Contact extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            isModalOpen: false
+        };
+
+        this.toggleModal = this.toggleModal.bind(this);  
+        this.handleLogin = this.handleLogin.bind(this);  
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
+    }
+
+    handleLogin(event) {
+        alert(`firstname: ${this.firstname.value} lastname: ${this.lastname.value}`);
+        this.toggleModal();
+        event.preventDefault();
+    }
+
+    render() {
+        return (
         <div className="container">
             <div className="row">
                 <div className="col">
@@ -12,6 +37,50 @@ function Contact(props) {
                     </div>        
                 </div>
             </div>
+            <hr/>
+
+            <div className="col">
+                <Button onClick={this.toggleModal} color="success" >Enquiry</Button>
+            </div>
+            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+            <ModalHeader toggle={this.toggleModal}>Enqiury</ModalHeader>
+            <ModalBody>
+            <Form onSubmit={this.handleLogin}>
+                            <FormGroup>
+                                <Label htmlFor="firstname">First Name</Label>
+                                <Input type="text" id="firstname" name="firstname"
+                                    innerRef={input => this.firstname = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="lastname">Last Name</Label>
+                                <Input type="text" id="lastname" name="lastname"
+                                    innerRef={input => this.lastname = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="phone">Phone</Label>
+                                <Input type="phone" id="phone" name="phone"
+                                    innerRef={input => this.phone = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="email">Email</Label>
+                                <Input type="email" id="email" name="email"
+                                    innerRef={input => this.email = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="date">Move In Date</Label>
+                                <Input type="date" id="date" name="date" 
+                                    innerRef={input => this.date = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="message">Message</Label>
+                                <Input type="message" id="message" name="message" rows="6"
+                                    innerRef={input => this.phone = input} />
+                            </FormGroup>
+                            <Button type="submit" value="submit" color="success">submit</Button>
+                        </Form>
+            </ModalBody>
+            </Modal>    
+
             <div className="row row-content align-items-center">
                 <div className="col-sm-4">
                     <h5>Address</h5>
@@ -27,7 +96,9 @@ function Contact(props) {
                 </div>
             </div>
         </div>
-    );
+        );
+    }
+
 }
 
 export default Contact;

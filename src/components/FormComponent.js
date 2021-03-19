@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button, Form, FormGroup, Label, Input, Col, Label, Modal, ModalHeader, ModalBody} from 'reactstrap';
 
 function Form(props){
     return(
