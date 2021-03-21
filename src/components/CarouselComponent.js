@@ -5,19 +5,19 @@ const items = [
     {
         src: "/assets/images/K_Kitchen.jpeg",
         altText: "Kitchen",
-        caption: 'cooking range',
+        caption: 'Range / Oven / Refrigator',
         header: 'Kitchen'
     },
     {
         src: "/assets/images/K_Front Yard.jpg",
-        altText: 'Front Yard',
-        caption: 'Spacious area',
-        header: 'Front Yard'
+        altText: "Inner Courtyard",
+        caption: 'Spacious front yard',
+        header: 'Inner Courtyard'
     },
     {
         src: "/assets/images/K_Living Room.jpeg",
         altText: 'Living Room',
-        caption: 'Heater, carpet',
+        caption: 'Electric Heater / Carpet',
         header: 'Living Room',
     },
 ];

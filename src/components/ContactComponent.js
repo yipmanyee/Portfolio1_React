@@ -21,7 +21,8 @@ class Contact extends Component {
     }
 
     handleLogin(event) {
-        alert(`firstname: ${this.firstname.value} lastname: ${this.lastname.value}`);
+        alert("Thank you for your submission. " +  `firstname: ${this.firstname.value} \n lastname: ${this.lastname.value} 
+        \n phone: ${this.phone.value} \n email: ${this.email.value} \n date: ${this.date.value} \n message: ${this.message.value}`);
         this.toggleModal();
         event.preventDefault();
     }
@@ -31,7 +32,8 @@ class Contact extends Component {
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <h2>Contact Us</h2>
+                    <h1></h1>
+                    <h2>Contact Us</h2><br/>
                     <div className="col">
                         <img src="/assets/images/K_Front.jpg" className="img-fluid" alt="front"></img>
                     </div>        
@@ -40,7 +42,7 @@ class Contact extends Component {
             <hr/>
 
             <div className="col">
-                <Button onClick={this.toggleModal} color="success" >Enquiry</Button>
+                <Button onClick={this.toggleModal} color="success">Enquiry</Button>
             </div>
             <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
             <ModalHeader toggle={this.toggleModal}>Enqiury</ModalHeader>
@@ -74,7 +76,7 @@ class Contact extends Component {
                             <FormGroup>
                                 <Label htmlFor="message">Message</Label>
                                 <Input type="message" id="message" name="message" rows="6"
-                                    innerRef={input => this.phone = input} />
+                                    innerRef={input => this.message = input} />
                             </FormGroup>
                             <Button type="submit" value="submit" color="success">submit</Button>
                         </Form>
