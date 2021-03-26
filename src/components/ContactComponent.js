@@ -21,7 +21,7 @@ class Contact extends Component {
     }
 
     handleLogin(event) {
-        alert("Thank you for your submission. " +  `firstname: ${this.firstname.value} \n lastname: ${this.lastname.value} 
+        alert(`Thank you for your submission. \n firstname: ${this.firstname.value} \n lastname: ${this.lastname.value} 
         \n phone: ${this.phone.value} \n email: ${this.email.value} \n date: ${this.date.value} \n message: ${this.message.value}`);
         this.toggleModal();
         event.preventDefault();
