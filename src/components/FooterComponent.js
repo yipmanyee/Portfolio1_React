@@ -22,7 +22,7 @@ function Footer(props) {
                         <a className="btn btn-social-icon btn-yelp" href="http://yelp.com/"><i className="fa fa-yelp fa-lg" /></a> 
                     </div>
                     <div class="col-4 col-sm-2 offset-1">
-                    <a role ="button" class="btn btn-success" href="tel:+12533595160"><i class="fa fa-phone fa-lg text-white"></i>253-359-5160</a>  
+                    <a role ="button" class="btn btn-success" href="tel:+12533595160"><i class="fa fa-phone fa-lg text-white"></i>1253-359-5160</a>  
                     </div>
                 </div>
             </div>
